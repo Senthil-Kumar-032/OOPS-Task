@@ -76,7 +76,7 @@ class CurrentAccount(BankAccount):
 
 if __name__ == "__main__":
 
-    # Create Savings Account
+    # Create Savings Account.
 
     savings = SavingsAccount("87787", 10000, 5)
     savings.deposit(2000)
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     print("---------------------------------------------------------------------")
 
-    # Create Current Account
+    # Create Current Account.
 
     current = CurrentAccount("22677", 15000, 5000)
     current.deposit(1000)
