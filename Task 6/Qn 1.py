@@ -15,21 +15,21 @@ class BankAccount:
 
         if amount > 0:
             self.__balance += amount
-            print("Amount deposited successfully.")
+            print(" Amount deposited successfully ")
         else:
-            print("Invalid deposit amount.")
+            print(" Invalid deposit amount ")
 
     def withdraw(self, amount):
 
         #   Withdraw money from the account.
 
         if amount <= 0:
-            print("Invalid withdrawal amount.")
+            print(" Invalid withdrawal amount ")
         elif amount > self.__balance:
-            print("Insufficient balance.")
+            print(" Insufficient balance ")
         else:
             self.__balance -= amount
-            print("Amount withdrawn successfully.")
+            print(" Amount withdrawn successfully ")
 
     def get_balance(self):
 
@@ -64,12 +64,12 @@ class CurrentAccount(BankAccount):
 
     def withdraw(self, amount):
 
-        #   Withdraw money ensuring minimum balance is maintained.
+        #   Withdraw money makes sure minimum balance is maintained.
 
         if amount <= 0:
-            print("Invalid withdrawal amount.")
+            print(" Invalid withdrawal amount ")
         elif self.get_balance() - amount < self.minimum_balance:
-            print("Minimum balance requirement not maintained.")
+            print(" Minimum balance requirement not maintained ")
         else:
             super().withdraw(amount)
 
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     savings = SavingsAccount("87787", 10000, 5)
     savings.deposit(2000)
     savings.withdraw(3000)
-    print("Savings Balance:", savings.get_balance())
-    print("Interest:", savings.calculate_interest())
+    print("Savings Balance:- ", savings.get_balance())
+    print("Interest:- ", savings.calculate_interest())
 
     print("---------------------------------------------------------------------")
 
@@ -91,4 +91,4 @@ if __name__ == "__main__":
     current = CurrentAccount("22677", 15000, 5000)
     current.deposit(1000)
     current.withdraw(12000)
-    print("Current Balance:", current.get_balance())
+    print("Current Balance:- ", current.get_balance())
