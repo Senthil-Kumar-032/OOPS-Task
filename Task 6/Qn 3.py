@@ -56,7 +56,7 @@ class Truck(Vehicle):
 
     def __init__(self, model, rental_rate, load_capacity):
         super().__init__(model, rental_rate)
-        self.load_capacity = load_capacity  # In tons
+        self.load_capacity = load_capacity
 
     def calculate_rental(self, days):
 
