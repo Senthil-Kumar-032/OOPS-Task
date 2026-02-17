@@ -11,7 +11,7 @@ class BankAccount:
 
     def deposit(self, amount):
 
-        #   Add money to the account.
+        #   Add money to the account
 
         if amount > 0:
             self.__balance += amount
@@ -21,7 +21,7 @@ class BankAccount:
 
     def withdraw(self, amount):
 
-        #   Withdraw money from the account.
+        #   Withdraw money from the account
 
         if amount <= 0:
             print(" Invalid withdrawal amount ")
@@ -33,14 +33,14 @@ class BankAccount:
 
     def get_balance(self):
 
-        #   Return current balance.
+        #   Return current balance
 
         return self.__balance
 
 
 class SavingsAccount(BankAccount):
 
-    #   Savings account with interest rate.
+    #   Savings account with interest rate
 
     def __init__(self, account_number, balance, interest_rate):
         super().__init__(account_number, balance)
@@ -48,7 +48,7 @@ class SavingsAccount(BankAccount):
 
     def calculate_interest(self):
 
-        #   Calculate interest on current balance.
+        #   Calculate interest on current balance
 
         interest = self.get_balance() * self.interest_rate / 100
         return interest
@@ -56,7 +56,7 @@ class SavingsAccount(BankAccount):
 
 class CurrentAccount(BankAccount):
 
-    #   Current account with minimum balance requirement.
+    #   Current account with minimum balance requirement
 
     def __init__(self, account_number, balance, minimum_balance):
         super().__init__(account_number, balance)
@@ -64,7 +64,7 @@ class CurrentAccount(BankAccount):
 
     def withdraw(self, amount):
 
-        #   Withdraw money makes sure minimum balance is maintained.
+        #   Withdraw money makes sure minimum balance is maintained
 
         if amount <= 0:
             print(" Invalid withdrawal amount ")
@@ -76,7 +76,7 @@ class CurrentAccount(BankAccount):
 
 if __name__ == "__main__":
 
-    # Create Savings Account.
+    # Create Savings Account
 
     savings = SavingsAccount("87787", 10000, 5)
     savings.deposit(2000)
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     print("---------------------------------------------------------------------")
 
-    # Create Current Account.
+    # Create Current Account
 
     current = CurrentAccount("22677", 15000, 5000)
     current.deposit(1000)
