@@ -7,7 +7,7 @@ class BankAccount:
 
     def __init__(self, account_number, balance):
         self.account_number = account_number
-        self.__balance = balance  # encapsulation
+        self.__balance = balance
 
     def deposit(self, amount):
 
